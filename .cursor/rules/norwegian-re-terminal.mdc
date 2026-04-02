@@ -1,0 +1,32 @@
+---
+description: TerraGIS Norwegian Real Estate Terminal — product context, data rules, stack
+alwaysApply: true
+---
+
+# Norwegian Real Estate Terminal (TerraGIS)
+
+## Goal
+
+Build institutional-grade **real estate risk and market analytics** for Norway (macro series, portfolio risk, scenarios, maps). This is **analytics / information services**, not personalized investment recommendations.
+
+## Authoritative docs in this repo
+
+- Root `compass_artifact_wf-7ce9f6b8-e2e0-45e5-9c01-48378bd7f359_text_markdown.md` — technical blueprint.
+- `AGENTS.md` — agent runbook (commands, priorities, compliance).
+
+## Implementation order (from blueprint)
+
+1. **Public APIs:** SSB PxWeb, Norges Bank SDMX — no authentication; highest leverage for MVP.
+2. **Medallion + Azure:** Bronze → Silver → Gold; Delta/PostGIS when infrastructure exists.
+3. **Matrikkel:** Maskinporten + Kartverket agreement — blocks full property spine; stub interfaces until credentials exist.
+4. **Risk engine:** Riskfolio-Lib on **quarterly** regional series; `t_factor=4`; Norwegian stress scenarios (rates, oil, housing, NOK, climate).
+
+## Compliance (non-negotiable)
+
+- No FINN scraping; no grunnbok/matrikkel personal data without proper legal basis and agreements.
+- Open government data: correct **attribution** and license terms.
+
+## Code style
+
+- Python 3.11+, type hints, small focused modules (`clients/`, `api/`).
+- Match existing patterns; avoid scope creep and unrelated refactors.
