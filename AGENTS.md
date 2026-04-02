@@ -3,7 +3,17 @@
 ## Repository
 
 - **GitHub:** [EasyEiendom/terragis-terminal](https://github.com/EasyEiendom/terragis-terminal)
-- **MVP branch:** `initial-mvp` — use this branch for the first integration with Easy sandbox / data connections configured in GitHub.
+- **MVP branch:** `initial-mvp` — wire Easy sandbox secrets and data connections to this repo/branch in GitHub (Environments, Actions secrets).
+- **CI:** `.github/workflows/ci.yml` runs `pytest` on pushes to `initial-mvp` and `main`.
+
+If the remote is empty, create the GitHub repo (no README), then from this folder:
+
+```bash
+git remote -v   # should show origin -> github.com/EasyEiendom/terragis-terminal.git
+git push -u origin initial-mvp
+```
+
+Use SSH instead of HTTPS if you prefer: `git remote set-url origin git@github.com:EasyEiendom/terragis-terminal.git`
 
 ## Product intent
 
