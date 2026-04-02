@@ -23,6 +23,7 @@ Bloomberg-class **analytics** for Norwegian real estate: risk and portfolio inte
 
 - `compass_artifact_wf-7ce9f6b8-e2e0-45e5-9c01-48378bd7f359_text_markdown.md` — architecture blueprint (APIs, stack, Medallion, regulatory notes).
 - `Literature MD/Norwegian Real Estate Risk & Analytics Platform — Institutional Blueprint.md` — institutional module design.
+- **Reference library:** use `Literature MD/*.md` only. PDFs under `pdf/` (if present locally) are gitignored and not part of the project source.
 
 ## Stack (target)
 
