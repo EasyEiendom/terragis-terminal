@@ -3,7 +3,17 @@
 ## Repository
 
 - **GitHub:** [EasyEiendom/terragis-terminal](https://github.com/EasyEiendom/terragis-terminal)
-- **MVP branch:** `initial-mvp` — use this branch for the first integration with Easy sandbox / data connections configured in GitHub.
+- **MVP branch:** `initial-mvp` — wire Easy sandbox secrets and data connections to this repo/branch in GitHub (Environments, Actions secrets).
+- **CI:** `.github/workflows/ci.yml` runs `pytest` on pushes to `initial-mvp` and `main`.
+
+If the remote is empty, create the GitHub repo (no README), then from this folder:
+
+```bash
+git remote -v   # should show origin -> github.com/EasyEiendom/terragis-terminal.git
+git push -u origin initial-mvp
+```
+
+Use SSH instead of HTTPS if you prefer: `git remote set-url origin git@github.com:EasyEiendom/terragis-terminal.git`
 
 ## Product intent
 
@@ -13,6 +23,7 @@ Bloomberg-class **analytics** for Norwegian real estate: risk and portfolio inte
 
 - `compass_artifact_wf-7ce9f6b8-e2e0-45e5-9c01-48378bd7f359_text_markdown.md` — architecture blueprint (APIs, stack, Medallion, regulatory notes).
 - `Literature MD/Norwegian Real Estate Risk & Analytics Platform — Institutional Blueprint.md` — institutional module design.
+- **Reference library:** use `Literature MD/*.md` only. PDFs under `pdf/` (if present locally) are gitignored and not part of the project source.
 
 ## Stack (target)
 

@@ -12,6 +12,7 @@ Build institutional-grade **real estate risk and market analytics** for Norway (
 ## Authoritative docs in this repo
 
 - Root `compass_artifact_wf-7ce9f6b8-e2e0-45e5-9c01-48378bd7f359_text_markdown.md` — technical blueprint.
+- `Literature MD/*.md` — reference library (PDFs are not in repo; use Markdown only).
 - `AGENTS.md` — agent runbook (commands, priorities, compliance).
 
 ## Implementation order (from blueprint)

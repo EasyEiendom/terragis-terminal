@@ -9,3 +9,7 @@ dist/
 .idea/
 .tmp_*.json
 data/bronze/*.json
+
+# Literature: use Markdown under Literature MD/ only; keep PDFs local (not in repo)
+pdf/
+*.pdf
